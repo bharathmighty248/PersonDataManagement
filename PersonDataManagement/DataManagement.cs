@@ -19,7 +19,8 @@ namespace PersonDataManagement
                 "\n4. Retrieve All Data Between Age 13 To 18 " +
                 "\n5. Retrieve Average Age " +
                 "\n6. Specific Name Check " +
-                "\n7. Skip Record For Age Below 60" +
+                "\n7. Skip Record For Age Below 60 " +
+                "\n8. Remove Specific Name " +
                 "\n0. Exit " +
                 "\nPlease Select Your Choice: ");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -47,6 +48,9 @@ namespace PersonDataManagement
                         break;
                     case 7:
                         personDataMain.SkipRecordForAgebelow60(list);
+                        break;
+                    case 8:
+                        personDataMain.RemoveSpecificName(list);
                         break;
                     case 0:
                         Console.WriteLine("Thankyou..");

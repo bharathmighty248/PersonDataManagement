@@ -109,6 +109,22 @@ namespace PersonDataManagement
             }
         }
 
+        public void RemoveSpecificName(List<Person> list)
+        {
+            if (list.Count > 0)
+            {
+                Console.Write("Enter The Person Name To Remove:  ");
+                string checkName = Console.ReadLine();
+                list.RemoveAll(x => x.Name == checkName);
+                Console.WriteLine("Data Of " + checkName + " Removed..\nRemaining Data in List: ");
+                DisplayData(list);
+            }
+            else
+            {
+                Console.WriteLine("Person Data is Empty..");
+            }
+        }
+
         public void DisplayData(List<Person> list)
         {
             if (list.Count > 0)
