@@ -95,6 +95,20 @@ namespace PersonDataManagement
             }
         }
 
+        public void SkipRecordForAgebelow60(List<Person> list)
+        {
+            if (list.Count > 0)
+            {
+                list.RemoveAll(x => x.Age < 60);
+                Console.WriteLine("Person Data of Age Below 60 Are Removed..\nRemaining Data in List: ");
+                DisplayData(list);
+            }
+            else
+            {
+                Console.WriteLine("Person Data is Empty..");
+            }
+        }
+
         public void DisplayData(List<Person> list)
         {
             if (list.Count > 0)
