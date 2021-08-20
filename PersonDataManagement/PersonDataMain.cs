@@ -62,6 +62,19 @@ namespace PersonDataManagement
             }
         }
 
+        public void RetrieveAverageAge(List<Person> list)
+        {
+            if (list.Count > 0)
+            {
+                var data = list.Select(x => x.Age).Average();
+                Console.WriteLine("Persons Average Age: " + data);
+            }
+            else
+            {
+                Console.WriteLine("PersonData is Empty..");
+            }
+        }
+
         public void DisplayData(List<Person> list)
         {
             if (list.Count > 0)

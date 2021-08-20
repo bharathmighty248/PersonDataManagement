@@ -17,6 +17,7 @@ namespace PersonDataManagement
                 "\n2. Display Data " +
                 "\n3. Retrieve Top 2 Persons Below Age 60 " +
                 "\n4. Retrieve All Data Between Age 13 To 18 " +
+                "\n5. Retrieve Average Age " +
                 "\n0. Exit " +
                 "\nPlease Select Your Choice: ");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -35,6 +36,9 @@ namespace PersonDataManagement
                         break;
                     case 4:
                         personDataMain.RetrieveAllDataBetweenAge13To18(list);
+                        break;
+                    case 5:
+                        personDataMain.RetrieveAverageAge(list);
                         break;
                     case 0:
                         Console.WriteLine("Thankyou..");
