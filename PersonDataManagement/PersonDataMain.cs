@@ -75,6 +75,26 @@ namespace PersonDataManagement
             }
         }
 
+        public void SpecificNameCheck(List<Person> list)
+        {
+            if (list.Count > 0)
+            {
+                Console.Write("Enter The Person Name To Check:  ");
+                string checkName = Console.ReadLine();
+                var check = list.Any(x => x.Name.Equals(checkName));
+                if(check == true)
+                {
+                    Console.WriteLine("\n" + checkName + " is Present In Person Data List");
+                }
+                else
+                    Console.WriteLine("\n" + checkName + " is Not Present In Person Data List");
+            }
+            else
+            {
+                Console.WriteLine("PersonData is Empty..");
+            }
+        }
+
         public void DisplayData(List<Person> list)
         {
             if (list.Count > 0)
