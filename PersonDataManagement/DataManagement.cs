@@ -15,7 +15,8 @@ namespace PersonDataManagement
             {
                 Console.Write("\n1. Add Person Data " +
                 "\n2. Display Data " +
-                "\n0.Exit " +
+                "\n3. Retrive Top 2 Persons Below Age 60 " +
+                "\n0. Exit " +
                 "\nPlease Select Your Choice: ");
                 choice = Convert.ToInt32(Console.ReadLine());
 
@@ -27,6 +28,9 @@ namespace PersonDataManagement
                         break;
                     case 2:
                         personDataMain.DisplayData(list);
+                        break;
+                    case 3:
+                        personDataMain.RetrieveTop2BelowAge60(list);
                         break;
                     case 0:
                         Console.WriteLine("Thankyou..");

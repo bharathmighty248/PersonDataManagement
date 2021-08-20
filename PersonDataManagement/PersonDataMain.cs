@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace PersonDataManagement
@@ -21,6 +22,25 @@ namespace PersonDataManagement
             person.Age = Convert.ToInt32(Console.ReadLine());
             list.Add(person);
             Console.WriteLine("Person Data Added..");
+        }
+
+        public void RetrieveTop2BelowAge60(List<Person> list)
+        {
+            if (list.Count> 0)
+            {
+                var data = list.Where(x => x.Age < 60).Take(2);
+                foreach(var personData in data)
+                {
+                    Console.WriteLine("SSN : " + personData.SSN);
+                    Console.WriteLine("Name : " + personData.Name);
+                    Console.WriteLine("Address : " + personData.Address);
+                    Console.WriteLine("Age : " + personData.Age);
+                }
+            }
+            else
+            {
+                Console.WriteLine("PersonData is Empty..");
+            }
         }
 
         public void DisplayData(List<Person> list)
