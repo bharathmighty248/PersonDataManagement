@@ -43,6 +43,25 @@ namespace PersonDataManagement
             }
         }
 
+        public void RetrieveAllDataBetweenAge13To18(List<Person> list)
+        {
+            if (list.Count > 0)
+            {
+                var data = list.Where(x => x.Age >= 13 && x.Age <= 18);
+                foreach (var personData in data)
+                {
+                    Console.WriteLine("SSN : " + personData.SSN);
+                    Console.WriteLine("Name : " + personData.Name);
+                    Console.WriteLine("Address : " + personData.Address);
+                    Console.WriteLine("Age : " + personData.Age);
+                }
+            }
+            else
+            {
+                Console.WriteLine("PersonData is Empty..");
+            }
+        }
+
         public void DisplayData(List<Person> list)
         {
             if (list.Count > 0)
